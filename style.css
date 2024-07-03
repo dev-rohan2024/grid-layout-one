@@ -1,0 +1,97 @@
+/* ========= import google font - (Poppins) ========== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* ========= global css start ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* ========= global css end ========== */
+/* ========= body css start ========= */
+body {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #f5f5f5;
+  margin: 20px 0px;
+}
+/* ========= body css end ========= */
+/* ========= grid layout css start ========= */
+.wrap {
+  background-color: #fff;
+  padding: 15px;
+  max-width: 1140px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.wrap .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "a b d"
+    "c c d";
+  min-height: 100vh;
+}
+
+.item {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.a {
+  background-color: violet;
+  grid-area: a;
+  padding: 30px;
+  border-top-left-radius: 5px;
+}
+
+.b {
+  background-color: yellowgreen;
+  grid-area: b;
+}
+
+.c {
+  background-color: royalblue;
+  grid-area: c;
+  border-bottom-left-radius: 5px;
+}
+
+.d {
+  background-color: rebeccapurple;
+  grid-area: d;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* ========= grid layout css end ========= */
+/* ========== responsive css start ========= */
+@media screen and (max-width: 750px) {
+  .wrap .container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a a"
+      "b b b "
+      "c c c "
+      "d d d ";
+  }
+  .a {
+    grid-area: a;
+    border-top-right-radius: 5px;
+  }
+  .b {
+    grid-area: b;
+  }
+  .c {
+    grid-area: c;
+    border-bottom-left-radius: 0px;
+  }
+  .d {
+    grid-area: d;
+    border-top-right-radius: 0;
+  }
+}
+/* ========== responsive css end ========= */
